@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน - iPhone Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="bg-[#F5F5F7] text-[#1D1D1F]">
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-[#D2D2D7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-[#1D1D1F] text-xl font-semibold">iPhone</a>
+                    <a href="index.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">หน้าแรก</a>
+                    <a href="products.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">สินค้าทั้งหมด</a>
+                    <a href="cart.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">ตะกร้า</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="cart.html" class="relative">
+                        <i class="fas fa-shopping-cart text-[#1D1D1F] text-2xl"></i>
+                        <span id="cartCount"
+                            class="absolute -top-2 -right-2 bg-[#0071E3] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white">
+        <h1 class="text-5xl font-bold mb-12 text-[#1D1D1F]">ชำระเงิน</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-semibold mb-6 text-[#1D1D1F]">ข้อมูลการจัดส่ง</h2>
+                <form id="checkoutForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-[#1D1D1F]">ชื่อ-นามสกุล</label>
+                        <input type="text" id="fullName"
+                            class="w-full bg-white border border-[#D2D2D7] rounded-lg px-4 py-3 focus:outline-none focus:border-[#0071E3] text-[#1D1D1F]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-[#1D1D1F]">อีเมล</label>
+                        <input type="email" id="email"
+                            class="w-full bg-white border border-[#D2D2D7] rounded-lg px-4 py-3 focus:outline-none focus:border-[#0071E3] text-[#1D1D1F]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-[#1D1D1F]">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone"
+                            class="w-full bg-white border border-[#D2D2D7] rounded-lg px-4 py-3 focus:outline-none focus:border-[#0071E3] text-[#1D1D1F]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-[#1D1D1F]">ที่อยู่</label>
+                        <textarea id="address" rows="3"
+                            class="w-full bg-white border border-[#D2D2D7] rounded-lg px-4 py-3 focus:outline-none focus:border-[#0071E3] text-[#1D1D1F]"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h2 class="text-2xl font-semibold mb-6 text-[#1D1D1F]">สรุปคำสั่งซื้อ</h2>
+                <div id="orderSummary" class="space-y-4 mb-6">
+                </div>
+                <div class="border-t border-[#D2D2D7] pt-6">
+                    <div class="flex justify-between mb-4 text-[#1D1D1F]">
+                        <span>ยอดรวม</span>
+                        <span id="orderTotal">฿0</span>
+                    </div>
+                    <button id="payBtn"
+                        class="w-full bg-[#0071E3] hover:bg-[#005BB5] text-white py-4 rounded-lg text-lg font-semibold transition">
+                        ยืนยันการสั่งซื้อ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-[#D2D2D7] py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">ซื้อและเรียนรู้</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">iPhone</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">iPad</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">Mac</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">บริการ</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">Apple Store</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">บริการ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">บัญชี</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">จัดการ Apple ID</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">เกี่ยวกับ Apple</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">ข่าวสาร</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-[#D2D2D7] text-center text-[#6E6E73]">
+                <p>Copyright © 2026 iPhone Store. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/Product.js"></script>
+    <script src="src/js/ProductManager.js"></script>
+    <script src="src/js/Cart.js"></script>
+    <script src="src/js/Checkout.js"></script>
+    <script src="src/js/Modal.js"></script>
+    <script src="src/js/checkoutPage.js"></script>
+</body>
+
+</html>

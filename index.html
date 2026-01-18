@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="bg-[#F5F5F7] text-[#1D1D1F]">
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-[#D2D2D7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-[#1D1D1F] text-xl font-semibold">iPhone</a>
+                    <a href="index.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">หน้าแรก</a>
+                    <a href="products.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">สินค้าทั้งหมด</a>
+                    <a href="cart.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">ตะกร้า</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="cart.html" class="relative">
+                        <i class="fas fa-shopping-cart text-[#1D1D1F] text-2xl"></i>
+                        <span id="cartCount"
+                            class="absolute -top-2 -right-2 bg-[#0071E3] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="pt-20 pb-32 text-center bg-white">
+            <img src="https://www.apple.com/v/iphone-17-pro/d/images/overview/welcome/hero__bdntboqignj6_medium_2x.jpg"
+                alt="iPhone 17 Pro Max" class="w-full h-auto mb-8 drop-shadow-2xl" />
+
+            <p class="text-2xl md:text-3xl text-[#6E6E73] mb-8">The most powerful iPhone ever.</p>
+        </section>
+
+        <section class="py-20 bg-[#F5F5F7]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-5xl font-bold text-center mb-16 text-[#1D1D1F]">เลือก iPhone ที่ใช่สำหรับคุณ</h2>
+                <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-[#D2D2D7] py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">ซื้อและเรียนรู้</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">iPhone</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">iPad</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">Mac</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">บริการ</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">Apple Store</a></li>
+                        <li><a href="#" class="hover:text-[#1D1D1F]">บริการ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">บัญชี</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">จัดการ Apple ID</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-[#1D1D1F]">เกี่ยวกับ Apple</h3>
+                    <ul class="space-y-2 text-[#6E6E73]">
+                        <li><a href="#" class="hover:text-[#1D1D1F]">ข่าวสาร</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-[#D2D2D7] text-center text-[#6E6E73]">
+                <p>Copyright © 2026 iPhone Store. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/Product.js"></script>
+    <script src="src/js/ProductManager.js"></script>
+    <script src="src/js/Cart.js"></script>
+    <script src="src/js/homePage.js"></script>
+</body>
+
+</html>
