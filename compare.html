@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สินค้าทั้งหมด - iPhone Store</title>
+    <title>เปรียบเทียบสินค้า - iPhone Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -37,14 +37,16 @@
         </div>
     </nav>
 
-    <main class="bg-white">
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-5xl font-bold text-center mb-16 text-[#1D1D1F]">สินค้าทั้งหมด</h1>
-                <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
-            </div>
-        </section>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-5xl font-bold text-[#1D1D1F]">เปรียบเทียบสินค้า</h1>
+            <button id="clearCompareBtn"
+                class="px-6 py-2 border border-[#D2D2D7] rounded-lg hover:border-[#0071E3] transition text-[#1D1D1F]">
+                ล้างทั้งหมด
+            </button>
+        </div>
+        <div id="compareTable" class="overflow-x-auto">
+        </div>
     </main>
 
     <footer class="bg-white border-t border-[#D2D2D7] py-12 mt-20">
@@ -89,7 +91,7 @@
     <script src="src/js/Cart.js"></script>
     <script src="src/js/Compare.js"></script>
     <script src="src/js/Modal.js"></script>
-    <script src="src/js/productsPage.js"></script>
+    <script src="src/js/comparePage.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 class Product {
-    constructor(name, basePrice, image, description, storage, color, storagePrices = {}, colorImages = {}, id = null) {
+    constructor(name, basePrice, image, description, storage, color, storagePrices = {}, colorImages = {}, specs = {}, id = null) {
         this.id = id;
         this.name = name;
         this.basePrice = basePrice;
@@ -9,6 +9,7 @@ class Product {
         this.color = color;
         this.storagePrices = storagePrices;
         this.colorImages = colorImages;
+        this.specs = specs;
     }
 
     getPrice(storage = null) {
@@ -32,17 +33,22 @@ class Product {
 
     renderCard() {
         return `
-            <div class="bg-white rounded-2xl overflow-hidden hover:scale-105 transition-transform cursor-pointer border border-[#D2D2D7]" onclick="window.location.href='product.html?id=${this.id}'">
-                <div class="aspect-square bg-[#F5F5F7] flex items-center justify-center overflow-hidden">
+            <div class="bg-white rounded-2xl overflow-hidden hover:scale-105 transition-transform border border-[#D2D2D7]">
+                <div class="aspect-square bg-[#F5F5F7] flex items-center justify-center overflow-hidden cursor-pointer" onclick="window.location.href='product.html?id=${this.id}'">
                     <img src="${this.image}" alt="${this.name}" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-semibold mb-2 text-[#1D1D1F]">${this.name}</h3>
+                    <h3 class="text-2xl font-semibold mb-2 text-[#1D1D1F] cursor-pointer" onclick="window.location.href='product.html?id=${this.id}'">${this.name}</h3>
                     <p class="text-[#6E6E73] mb-4">${this.description}</p>
                     <p class="text-xl font-semibold mb-4 text-[#1D1D1F]">${this.getFormattedPrice()}</p>
-                    <a href="product.html?id=${this.id}" class="inline-block bg-[#0071E3] hover:bg-[#005BB5] text-white px-6 py-2 rounded-lg transition">
-                        ซื้อ
-                    </a>
+                    <div class="flex space-x-3">
+                        <a href="product.html?id=${this.id}" class="flex-1 inline-block bg-[#0071E3] hover:bg-[#005BB5] text-white px-6 py-2 rounded-lg transition text-center">
+                            ซื้อ
+                        </a>
+                        <button class="compare-btn px-4 py-2 border border-[#D2D2D7] rounded-lg hover:border-[#0071E3] transition text-[#1D1D1F]" data-product-id="${this.id}">
+                            <i class="fas fa-balance-scale"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         `;

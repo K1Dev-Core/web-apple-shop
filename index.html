@@ -18,9 +18,15 @@
                     <a href="index.html" class="text-[#1D1D1F] text-xl font-semibold">iPhone</a>
                     <a href="index.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">หน้าแรก</a>
                     <a href="products.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">สินค้าทั้งหมด</a>
+                    <a href="compare.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">เปรียบเทียบ</a>
                     <a href="cart.html" class="text-[#6E6E73] hover:text-[#1D1D1F] transition">ตะกร้า</a>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <a href="compare.html" class="relative">
+                        <i class="fas fa-balance-scale text-[#1D1D1F] text-2xl"></i>
+                        <span id="compareCount"
+                            class="absolute -top-2 -right-2 bg-[#0071E3] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
                     <a href="cart.html" class="relative">
                         <i class="fas fa-shopping-cart text-[#1D1D1F] text-2xl"></i>
                         <span id="cartCount"
@@ -88,6 +94,8 @@
     <script src="src/js/Product.js"></script>
     <script src="src/js/ProductManager.js"></script>
     <script src="src/js/Cart.js"></script>
+    <script src="src/js/Compare.js"></script>
+    <script src="src/js/Modal.js"></script>
     <script src="src/js/homePage.js"></script>
 </body>
 
